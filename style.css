@@ -1,0 +1,191 @@
+:root {
+  --main-color1: DodgerBlue;
+  --main-color2: MediumSpringGreen;
+  --main-color3: Gold;
+  --main-color4: NavajoWhite;
+  --main-color5: PaleGoldenRod;
+  --main-color6: Gainsboro;
+  --main-color7: #1b1b1b;
+}
+
+*{
+  margin: 0;
+}
+
+body {
+  font-size: 24px;
+  background-color: black;
+}
+
+h1 {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: var(--main-color6);
+  background: linear-gradient(
+    180deg,
+    rgba(100, 20, 20, 1) 10%,
+    rgba(100, 20, 20, 0.65) 40%,
+    rgba(100, 20, 20, 1) 90%
+    );
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  text-shadow: 2px 2px 8px black;
+  padding-left: 15px;
+  z-index: 1;
+ }
+
+h2 {
+  width: 210px;
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  text-align: center;
+  color: var(--main-color7);
+  background-color: var(--main-color6);
+  padding: 10px 15px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+h3 {
+  color: var(--main-color6);
+  font-size: 14px;
+  font-family: Arial, Impact, sans-serif;
+  text-shadow: 2px 2px 5px black;
+}
+
+img {
+  width: 150px;
+  height: auto;
+  position: fixed;
+  top: 0;
+  right: 20px;
+  rotate: -9deg;
+  z-index: 1;
+}
+
+#onoff {
+  width: 15px;
+  height: 35px;
+  margin-top: 20px;
+  padding: 30px;
+  background-color: var(--main-color1);
+  border-inline: 1rem solid var(--main-color7);
+  writing-mode: horizontal-tb;
+  direction: rtl;
+  border-radius: 50%;
+}
+
+span {
+  display: flex;
+  justify-content: center;
+  margin-top: -8px;
+}
+
+#drum-machine {
+  margin: 15px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;
+  background-image: url("https://cdn.pixabay.com/photo/2017/01/02/13/11/drum-kit-1946753_960_720.jpg");
+  box-shadow: inset 0px 0px 10px 10px rgba(0,0,0,0.75);
+  background-repeat: no-repeat;
+  background-size: 150vw;
+}
+
+.wrapper {
+    width: 100%;
+    display: grid;
+    padding: 15px;
+    grid-gap: 10px;
+    margin-top: 60px;
+    border-radius: 15px;
+    grid-template-columns: 1fr;
+ }
+
+.keyboard {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.keyboard .drum-pad {
+  width: 100%;
+  height: 80px;
+  outline: none;
+  font-size: 34px;
+  text-shadow: 2px 2px 8px black;
+  color: var(--main-color6);
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: rgba(100, 20, 20, 0.65);
+  box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.5);
+  transition: all .3s ease-in-out;
+}
+
+@media only screen and (max-width: 600px){
+  img {
+    visibility:hidden;
+  }
+}
+
+@media(min-width: 768px){
+  .wrapper {
+      width: 680px;
+  }
+}
+
+@media(min-width: 992px){
+  .wrapper {
+     grid-template-columns: 1fr 1fr;
+  }
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.control > button,
+.control > input,
+.control > h2{
+  margin-bottom: 10px
+}
+
+.control > input {
+  width: 250px;
+  cursor: pointer;
+  
+}
+
+.control button{
+  border: none;
+  color: var(--main-color7);
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 30px;
+  border-radius: 5px;
+  background-color: var(--main-color6);
+  box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.4);
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--main-color6);
+  opacity: 0.5;
+  font-size: 12px;
+  font-weight: 400;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  position: fixed;
+  right: 3px;
+  bottom: 10px;
+}
